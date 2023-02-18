@@ -35,12 +35,14 @@ const AddDialog = (props) => {
 
       axios.get('api.user.tree.node.create',{params:req})
       .then(() => {
-        setIsLoading(false);
-        setOpen(false);
         // refresh data as an example
         refresh(prevState => !prevState);
       })
-      .catch(err=>console.log(err));
+      .catch(err=>console.log(err))
+      .finally(()=>{
+        setIsLoading(false);
+        setOpen(false);
+      });
     }
 
     if(name.length){

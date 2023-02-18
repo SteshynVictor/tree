@@ -33,12 +33,14 @@ const DelDialog = (props) => {
     axios
       .get("api.user.tree.node.delete", { params: req })
       .then(() => {
-        setIsLoading(false);
-        setOpen(false);
         // refresh data as an example
         refresh(prevState => !prevState);
       })
-      .catch((err) => console.log(err));
+      .catch((err) => console.log(err))
+      .finally(()=>{
+        setIsLoading(false);
+        setOpen(false);
+      });
   };
 
   return (
