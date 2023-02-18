@@ -1,0 +1,45 @@
+body {
+  font-family: 'Roboto';
+  font-weight: 400;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  // background:#555;
+}
+
+.tree-menu{
+  padding: 30px;
+}
+
+.tree{
+  flex:1;
+  display:flex;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 400px;
+  .MuiTreeItem-content{
+    &:hover{
+      color:#1976d2;
+      background-color: #fff !important;
+    }
+  }
+  .Mui-selected{
+    color:#1976d2;
+    background-color: #fff !important;
+    &:hover{
+      background-color: #fff !important;
+    }
+    &.Mui-focused{
+      color:#1976d2;
+      background-color: #fff !important;
+      &:hover{
+        background-color: #fff !important;
+      }
+    }
+  }
+}
+
+.copy{
+  text-align: center;
+  padding: 30px;
+}
